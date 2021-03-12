@@ -4,17 +4,17 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'website@localplumberswecare.uk';
+$from = '<website@localplumberswecare.co.uk>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'jobs@localplumberswecare.co.uk';
+$sendTo = '<jobs@localplumberswecare.co.uk>';
 
 // subject of the email
 $subject = 'New message from contact form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'What services do you require', 'message' => 'Message'); 
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'need' => 'Need', 'email' => 'Email', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
@@ -26,11 +26,8 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
  *  LET'S DO THE SENDING
  */
 
-// // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-// error_reporting(E_ALL & ~E_NOTICE);
-
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE);
 
 try
 {
@@ -46,10 +43,10 @@ try
         }
     }
 
-    // All the necessary headers for the email.
+    // All the neccessary headers for the email.
     $headers = array('Content-Type: text/plain; charset="UTF-8";',
         'From: ' . $from,
-        'Reply-To: ' . $_POST['email'],
+        'Reply-To: ' . $from,
         'Return-Path: ' . $from,
     );
     
