@@ -10,11 +10,11 @@ $from = '<website@localplumberswecare.co.uk>';
 $sendTo = '<jobs@localplumberswecare.co.uk>';
 
 // subject of the email
-$subject = 'New message from contact form';
+$subject = 'New Enquiry from Website form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('areapage' => 'areapage', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message'); 
+$fields = array('areapage' => 'Area Page', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
@@ -34,7 +34,7 @@ try
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');
             
-    $emailText = "You have a new message from your contact form\n=============================\n";
+    $emailText = "You have a new website enquiry\n=============================\n";
 
     foreach ($_POST as $key => $value) {
         // If the field exists in the $fields array, include it in the email 
@@ -64,7 +64,7 @@ catch (\Exception $e)
 if ($responseArray['type'] == 'success') {
     // success redirect
 
-    header('Location: http://www.localplumberswecare.uk');
+    header('Location: http://www.localplumberswecare.uk/thank-you.html');
 }
 else {
     //error redirect
