@@ -8684,10 +8684,10 @@ h1, h2, h3, h4, h5,
 .slider-text {
   color: rgba(255, 255, 255, 0.8); }
   .slider-text .subheading {
-    font-size: 12px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fc5e28;
+    color: #04a6ae;
     display: inline-block;
     margin-bottom: 20px;
     font-weight: 600; }
