@@ -9105,6 +9105,23 @@ h1, h2, h3, h4, h5,
   .appointment-form textarea.form-control {
     height: inherit !important; }
 
+.service-aside-stretch {
+  background: #dcdcdc; }
+  .service-aside-stretch:after {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    content: '';
+    width: 360%;
+    background: #dcdcdc; }
+  @media (max-width: 767.98px) {
+    .service-aside-stretch {
+      background: transparent; }
+      .service-aside-stretch:after {
+        background: transparent;
+        display: none; } }
+
 .aside-stretch {
   background: #040e26; }
   .aside-stretch:after {
@@ -9162,6 +9179,9 @@ textarea.form-control {
 
 .bg-secondary {
   background: #040e26 !important; }
+
+.bg-service {
+  background: #dcdcdc !important; }
 
 .bg-half-light {
   position: relative;
@@ -9409,6 +9429,9 @@ textarea.form-control {
 
 .heading-section.heading-section-white p {
   color: rgba(255, 255, 255, 0.9); }
+
+.heading-section.heading-section-black p {
+  color: #000000; }
 
 .heading-section.heading-section-white h4 {
   color: #04a6ae;
