@@ -7,7 +7,7 @@
 $from = '<website@localplumberswecare.co.uk>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = '<jobs@localplumberswecare.co.uk>';
+$sendTo = '<jmwindsurfer@googlemail.com>';
 
 // subject of the email
 $subject = 'New Enquiry from Website form';
