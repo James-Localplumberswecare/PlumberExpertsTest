@@ -64,9 +64,9 @@ catch (\Exception $e)
 if ($responseArray['type'] == 'success') {
     // success redirect
 
-    header('Location: http://www.localplumberswecare.co.uk/thank-you.html');
+    header('Location: https://www.localplumberswecare.co.uk/thank-you.html');
 }
 else {
     //error redirect
-    header('Location: http://www.localplumberswecare.co.uk/404.html');
+    header('Location: https://www.localplumberswecare.co.uk/404.html');
 }
