@@ -37,7 +37,7 @@ if(!empty($_POST["send"])) {
     $mail->IsHTML(true);
     
     $mail->SMTPSecure = 'tls';
-    $mail->Host = 'mail-localplumberswecare.co.uk';
+    $mail->Host = 'mail.localplumberswecare.co.uk';
     
     if (! empty($_FILES['attachment'])) {
         $count = count($_FILES['attachment']['name']);
