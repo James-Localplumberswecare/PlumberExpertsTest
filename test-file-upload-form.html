@@ -6,16 +6,16 @@
 <!-- Display contact form -->
 <form method="post" action="test-form.php" enctype="multipart/form-data">
     <div class="form-group">
-        <input type="text" name="name" class="form-control" value="<?php echo !empty($postData['name'])?$postData['name']:''; ?>" placeholder="Name" required="">
+        <input type="text" name="name" class="form-control" value="" placeholder="Name" required="required">
     </div>
     <div class="form-group">
-        <input type="email" name="email" class="form-control" value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>" placeholder="Email address" required="">
+        <input type="email" name="email" class="form-control" value="" placeholder="Email address" required="required">
     </div>
     <div class="form-group">
-        <input type="text" name="subject" class="form-control" value="<?php echo !empty($postData['subject'])?$postData['subject']:''; ?>" placeholder="Subject" required="">
+        <input type="text" name="subject" class="form-control" value="" placeholder="Subject" required="required">
     </div>
     <div class="form-group">
-        <textarea name="message" class="form-control" placeholder="Write your message here" required=""><?php echo !empty($postData['message'])?$postData['message']:''; ?></textarea>
+        <textarea name="message" class="form-control" placeholder="Write your message here" required="required"></textarea>
     </div>
     <div class="form-group">
         <input type="file" name="attachment" class="form-control">

@@ -46,11 +46,11 @@ if(isset($_POST['submit'])){
             if($uploadStatus == 1){
                 
                 // Recipient
-                $toEmail = 'admin@example.com';
+                $toEmail = 'jobs@localplumberswecare.co.uk';
 
                 // Sender
-                $from = 'sender@example.com';
-                $fromName = 'CodexWorld';
+                $from = 'admin@localplumberswecare.co.uk';
+                $fromName = 'Local Plumbers We Care';
                 
                 // Subject
                 $emailSubject = 'Contact Request Submitted by '.$name;
