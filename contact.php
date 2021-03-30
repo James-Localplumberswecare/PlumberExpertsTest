@@ -14,7 +14,7 @@ $subject = 'New Enquiry from Website form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('areapage' => 'Area Page', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message', 'fileupload'=> 'FileUpload'); 
+$fields = array('areapage' => 'Area Page', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message', 'fileupload'=> 'File Upload'); 
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
@@ -27,7 +27,7 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
  */
 
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(-1);
+error_reporting(0);
 
 try
 {
@@ -49,6 +49,18 @@ try
         'Reply-To: ' . $from,
         'Return-Path: ' . $from,
     );
+
+    //Get the uploaded file information
+    $name_of_uploaded_file =
+    basename($_FILES['uploaded_file']['name']);
+
+    //get the file extension of the file
+    $type_of_uploaded_file =
+    substr($name_of_uploaded_file,
+    strrpos($name_of_uploaded_file, '.') + 1);
+
+    $size_of_uploaded_file =
+    $_FILES["uploaded_file"]["size"]/1024;//size in KBs
     
     // Send email
     mail($sendTo, $subject, $emailText, implode("\n", $headers));
