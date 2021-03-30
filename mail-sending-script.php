@@ -7,7 +7,7 @@ if(!empty($_POST["send"])) {
     $mail->SMTPDebug = 0;
     $mail->SMTPAuth = TRUE;
     
-    $mail->Port = 587;
+    $mail->Port = 465;
     
     $mail->Username = "website@localplumberswecare.co.uk";
     $mail->Password = "Website-LPWC-2021";
@@ -37,7 +37,7 @@ if(!empty($_POST["send"])) {
     $mail->IsHTML(true);
     
     $mail->SMTPSecure = 'tls';
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'mail-localplumberswecare.co.uk';
     
     if (! empty($_FILES['attachment'])) {
         $count = count($_FILES['attachment']['name']);
