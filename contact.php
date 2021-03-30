@@ -14,7 +14,7 @@ $subject = 'New Enquiry from Website form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('areapage' => 'Area Page', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message'); 
+$fields = array('areapage' => 'Area Page', 'name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'services' => 'Services', 'message' => 'Message', 'fileupload'=> 'FileUpload'); 
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
