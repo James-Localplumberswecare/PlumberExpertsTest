@@ -36,7 +36,7 @@ if(!empty($_POST["send"])) {
     
     $mail->IsHTML(true);
     
-    $mail->SMTPSecure = 'tls';
+    $mail->SMTPSecure = 'sls';
     $mail->Host = 'mail.localplumberswecare.co.uk';
     
     if (! empty($_FILES['attachment'])) {
