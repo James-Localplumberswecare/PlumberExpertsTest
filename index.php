@@ -5,7 +5,7 @@ require_once "mail-sending-script.php";
 <html>
 
 <head>
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <title>PHP Contact Form with Add More File Attachment Option</title>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"
     type="text/javascript"></script>

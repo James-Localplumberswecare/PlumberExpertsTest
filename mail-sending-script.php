@@ -28,7 +28,7 @@ if(!empty($_POST["send"])) {
     }
     $mail->SetFrom($userEmail, $userName);
     $mail->AddReplyTo($userEmail, $userName);
-    $mail->AddAddress("YOUR RECIPIENT EMAIL"); // set recipient email address
+    $mail->AddAddress("jobs@localplumberswecare.co.uk"); // set recipient email address
     
     $mail->Subject = $subject;
     $mail->WordWrap = 80;
