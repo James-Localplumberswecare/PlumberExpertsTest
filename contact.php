@@ -29,12 +29,6 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
 error_reporting(-1);
 
-$recaptcha = $_POST['g-recaptcha-response'];
-$res = reCaptcha($recaptcha);
-if(!$res['success']){
-  // Error
-}
-
 try
 {
 
