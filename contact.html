@@ -37,7 +37,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<script src="https://kit.fontawesome.com/29c560860b.js" crossorigin="anonymous"></script>
 
-	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+	<script>
+		function onSubmit(token) {
+			document.getElementById("contact-form").submit();
+		}
+	</script>
 
 	<link rel="stylesheet" href="css/animate.css">
 	
@@ -208,7 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="SEND" class="btn btn-primary py-3 px-4">
+									<input type="submit" value="SEND" class="btn btn-primary py-3 px-4 g-" data-sitekey="6LeDOKEaAAAAAIEYE3pSKj4j_N8cVxT1TCQvxQMH" data-callback='onSubmit'>
 								</div>
 							</div>
 						</div>
