@@ -43,7 +43,7 @@ $(function () {
         }
     })
     function reCaptcha($recaptcha){
-        $secret = "YOUR SECRET KEY";
+        $secret = "6LeDOKEaAAAAAFVzzEY8V-KsCbF4x8-nF_a-3jwR";
         $ip = $_SERVER['REMOTE_ADDR'];
       
         $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
