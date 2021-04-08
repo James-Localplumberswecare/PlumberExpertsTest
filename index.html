@@ -37,6 +37,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<script src="https://kit.fontawesome.com/29c560860b.js" crossorigin="anonymous"></script>
 
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+	<script>
+		function onSubmit(token) {
+			document.getElementById("contact-form").submit();
+		}
+	</script>
+
 	<link rel="stylesheet" href="css/animate.css">
 	
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -754,7 +762,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input type="submit" value="SEND" class="btn btn-primary py-3 px-4">
+									<input type="submit" value="SEND" class="btn btn-primary py-3 px-4 g-recaptcha" data-sitekey="6Lf6VKEaAAAAAPelYZ_MhXR1H7K4sgn_G-Qcrpnn" data-callback='onSubmit'>
 								</div>
 							</div>
 						</form>
