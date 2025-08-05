@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -500,7 +500,7 @@ pre {
     .container {
       max-width: 1140px; } }
 
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-lee {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -522,6 +522,12 @@ pre {
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
+
+@media only screen and (min-width : 1200px) {
+
+    .container { width: 1500px; } 
+
+}
 
 .row {
   display: -webkit-box;
@@ -3737,13 +3743,13 @@ input[type="button"].btn-block {
   background: no-repeat center center;
   background-size: 100% 100%; }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
 
-@media (min-width: 576px) {
+@media (min-width: 575.98px) {
   .navbar-expand-sm {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3775,7 +3781,7 @@ input[type="button"].btn-block {
     .navbar-expand-sm .navbar-toggler {
       display: none; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98pxpx) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
     padding-right: 0;
@@ -8491,14 +8497,14 @@ h1, h2, h3, h4, h5,
   z-index: 3;
   padding: 0;
   overflow: hidden; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 1500px) {
     .ftco-navbar-light {
       background: #04a6ae !important;
       position: relative;
       top: 0;
       padding: 10px 20px; } }
   .ftco-navbar-light .container {
-    width: 1110px;
+    width: 1800px;
     margin: 0 auto;
     padding: 0;
     background: #04a6ae !important; }
@@ -8688,7 +8694,6 @@ h1, h2, h3, h4, h5,
   color: rgba(255, 255, 255, 0.8); }
   .slider-text .subheading {
     font-size: 18px;
-    text-transform: uppercase;
     letter-spacing: 2px;
     color: #04a6ae;
     display: inline-block;
@@ -8698,8 +8703,7 @@ h1, h2, h3, h4, h5,
     font-size: 60px;
     color: #fff;
     line-height: 1;
-    font-weight: 900;
-    text-transform: uppercase; }
+    font-weight: 900; }
     @media (max-width: 991.98px) {
       .slider-text h1 {
         font-size: 36px; } }
@@ -8714,7 +8718,6 @@ h1, h2, h3, h4, h5,
     margin-bottom: 20px;
     z-index: 99;
     font-weight: 500;
-    text-transform: uppercase;
     color: rgba(255, 255, 255, 0.8); }
     .slider-text .breadcrumbs span {
       color: rgba(255, 255, 255, 0.8); }
@@ -9445,7 +9448,14 @@ textarea.form-control {
 .user-img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top; }
+  background-position: center; }
+
+.img-1,
+.blog-img,
+.user-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top; }
 
 .testimony-section {
   position: relative;
@@ -10319,3 +10329,118 @@ textarea.form-control {
   .modal-content .modal-footer {
     border: none;
     background: #f8f8f8; }
+
+----------------------
+/* Navbar container */
+.1navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.1navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.1dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.1dropdown .1dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.1navbar a:hover, .1dropdown:hover .1dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.1dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.1dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.1dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.1dropdown:hover .1dropdown-content {
+  display: block;
+}
+
+.slider-text1 {
+  color: rgba(255, 255, 255, 0.8); }
+  .slider-text1 .subheading {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #04a6ae;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 600; }
+  .slider-text1 h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 900; }
+    @media (max-width: 991.98px) {
+      .slider-text1 h1 {
+        font-size: 36px; } }
+  .slider-text1 p {
+    font-weight: 400; }
+    .slider-text1 p strong {
+      font-weight: 700; }
+      .slider-text1 p strong a {
+        color: #000000; }
+  .slider-text1 .breadcrumbs {
+    font-size: 16px;
+    margin-bottom: 20px;
+    z-index: 99;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8); }
+    .slider-text1 .breadcrumbs span {
+      color: rgba(255, 255, 255, 0.8); }
+      .slider-text1 .breadcrumbs span i {
+        color: rgba(255, 255, 255, 0.8); }
+      .slider-text1 .breadcrumbs span a {
+        color: rgba(255, 255, 255, 0.8); }
+        .slider-text1 .breadcrumbs span a:hover, .slider-text1 .breadcrumbs span a:focus {
+          color: #00717A; }
+          .slider-text1 .breadcrumbs span a:hover i, .slider-text1 .breadcrumbs span a:focus i {
+            color: #00717A; }
+  .slider-text1 .bread {
+    font-weight: 700;
+    color: #fff;
+    font-size: 50px; }
