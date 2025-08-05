@@ -10443,4 +10443,8 @@ textarea.form-control {
   .slider-text1 .bread {
     font-weight: 700;
     color: #fff;
-    font-size: 50px; }
+    font-size: 50px; }/* Logo sizing for navbar-brand */
+.navbar-brand img {
+    max-width: 80px;
+    height: auto;
+}
