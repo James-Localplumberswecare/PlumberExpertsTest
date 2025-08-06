@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
  *  CONFIGURE EVERYTHING HERE
  */
@@ -70,3 +70,8 @@ else {
     //error redirect
     header('Location: https://www.localplumberswecare.co.uk/404.html');
 }
+
+
+
+
+
